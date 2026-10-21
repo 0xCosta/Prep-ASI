@@ -9,7 +9,5 @@
 import re
 
 def validar_data_hora(data_hora_str):
-    padrao = re.compile(
-        r'^\d{4}\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[12]\d|3[01])\s(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$'
-    )
+    padrao = re.compile(r'^\d{4}/(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01]) ([01]\d|2[0-3]):[0-5]\d:[0-5]\d$')
     return bool(padrao.match(data_hora_str.strip()))
